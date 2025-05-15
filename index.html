@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reena Aggarwal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #9096a4 0%, #f4f6f8 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      transition: background-color 0.4s, color 0.4s;
+    }
+
+    .dark-mode {
+      background: linear-gradient(135deg, #121212 0%, #2c2c2c 100%);
+      color: #f4f4f4;
+    }
+
+    .card {
+      background-color: #fff;
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode .card {
+      background-color: #1e1e1e;
+      color: #f4f4f4;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .card h1 {
+      font-size: 24px;
+      margin: 16px 0 8px;
+      color: inherit;
+    }
+
+    .title {
+      color: #777;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .dark-mode .title {
+      color: #bbb;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .highlight {
+      font-weight: normal;
+      color: inherit;
+      margin: 10px 0;
+    }
+
+    .socials {
+      margin: 16px 0;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #9096a4;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #7f838e;
+    }
+
+    a i {
+      text-decoration: none;
+    }
+
+    .card button {
+      background: linear-gradient(to right, #9096a4, #c0c3c9);
+      border: none;
+      color: white;
+      padding: 12px;
+      width: 90%;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background: linear-gradient(to right, #7f838e, #a3a6ae);
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .dark-mode .dark-toggle {
+      color: #f4f4f4;
+    }
+
+    .attrock-link {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .dark-mode .attrock-link {
+      color: white !important;
+    }
+
+    @media (max-width: 400px) {
+      .card {
+        margin: 20px;
+      }
+
+      .card h1 {
+        font-size: 20px;
+      }
+
+      .title {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌗 Dark mode toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()" id="darkModeBtn">
+    <i class="fa fa-moon-o" id="darkIcon"></i>
+  </button>
+
+  <div class="card">
+    <img src="./ReenaAggarwal1.png" alt="Reena Aggarwal" />
+    <h1>Reena Aggarwal</h1>
+    <p class="title">Head of Operations & Sales</p>
+    <p class="highlight"><b>Strategic Visionary -</b><br>16 Years in Sales, Marketing, Operations <br>& Client Relations</p>
+    <p>
+<!--       <a href="https://attrock.com/" target="_blank" class="attrock-link">
+        Attrock Consultancy Private Limited
+      </a> -->
+    </p>
+    <div class="socials">
+      <a href="mailto:reena.1stw@gmail.com?subject=Hello%20Reena&body=Hi%20Reena%2C%0AI'd%20love%20to%20connect%20with%20you.">
+        <i class="fa fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/reena-aggarwal-243235127/">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+    <a href="tel:+919311023300"><button>Contact</button></a>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.getElementById("darkIcon");
+      icon.classList.toggle("fa-moon-o");
+      icon.classList.toggle("fa-sun-o");
+    }
+  </script>
+
+</body>
+</html>
